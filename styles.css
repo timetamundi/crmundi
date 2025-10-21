@@ -5,6 +5,7 @@
   --muted: #9ca3af;
   --brand: #6bad53;
   --brand-2: #34d399;
+  --brand-3: #2d609e;
   --stroke: #1f2937;
 }
 * {
@@ -137,7 +138,7 @@ a {
   border-bottom: 1px solid var(--stroke);
 }
 .section.alt {
-  background: #0f1520;
+  background: var(--brand-3);
 }
 .section h2 {
   font-size: 28px;
