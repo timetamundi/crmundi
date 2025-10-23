@@ -1,12 +1,14 @@
 :root {
-  --bg: #0d1117;
+  --bg: #f8fafc;
+  --header-bg: #ffffffcf;
+  --banner-gradient-contrast: #0d1117;
   --elev: #111827;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
+  --text: #47566b;
+  --muted: #e5e7eb;
   --brand: #6bad53;
   --brand-2: #34d399;
   --brand-3: #2d609e;
-  --stroke: #1f2937;
+  --stroke: #e2e8f0;
 }
 * {
   box-sizing: border-box;
@@ -33,7 +35,7 @@ a {
 .header {
   position: sticky;
   top: 0;
-  background: rgba(13, 17, 23, 0.85);
+  background: var(--header-bg);
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--stroke);
   z-index: 10;
@@ -58,11 +60,8 @@ a {
   gap: 16px;
   align-items: center;
 }
-.menu a {
-  color: var(--muted);
-}
-.menu a:hover {
-  color: var(--text);
+.menu a:not(.btn-primary):hover {
+  color: var(--brand);
 }
 .menu-toggle {
   display: none;
@@ -83,20 +82,27 @@ a {
   border: 0;
   font-weight: 700;
 }
-.menu .btn-primary {
-  color: white;
+.btn-primary:hover {
+  color: var(--text);
+}
+.btn-primary {
+  color: var(--muted);
 }
 .btn-secondary {
   background: var(--stroke);
+}
+.btn-secondary:hover {
+  color: var(--brand);
 }
 .hero {
   padding: 72px 0;
   border-bottom: 1px solid var(--stroke);
   background: radial-gradient(
-    1200px 600px at 20% -10%,
+    1200px 600px at 50% 50%,
     var(--brand),
-    transparent
+    var(--banner-gradient-contrast)
   );
+  color: var(--muted);
 }
 .hero-grid {
   display: grid;
@@ -110,7 +116,6 @@ a {
   margin: 0 0 12px;
 }
 .hero p {
-  color: var(--muted);
   margin: 0 0 20px;
 }
 .cta {
@@ -121,7 +126,6 @@ a {
 .bullets {
   margin: 18px 0 0;
   padding-left: 18px;
-  color: var(--muted);
 }
 .hero-media .mockup {
   height: 320px;
