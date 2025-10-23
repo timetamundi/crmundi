@@ -7,8 +7,9 @@
   --muted: #e5e7eb;
   --brand: #6bad53;
   --brand-2: #34d399;
-  --brand-3: #2d609e;
+  --brand-3: #0f3ea3;
   --stroke: #e2e8f0;
+  --box-shadow-style-default: 0 4px 6px -1px #0f3ea31a, 0 2px 4px -2px #0f3ea31a;
 }
 * {
   box-sizing: border-box;
@@ -129,20 +130,27 @@ a {
 }
 .hero-media .mockup {
   height: 320px;
-  border-radius: 16px;
-  background: linear-gradient(145deg, #0f172a, #0b1220);
-  border: 1px solid var(--stroke);
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
+}
+.hero-media .mockup img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 }
 .section {
   padding: 56px 0;
   border-bottom: 1px solid var(--stroke);
 }
-.section.alt {
-  background: var(--brand-3);
+.section.integrations {
+  background: radial-gradient(
+    1200px 600px at 50% 50%,
+    var(--brand-3),
+    var(--banner-gradient-contrast)
+  );
+  color: var(--muted);
 }
 .section h2 {
   font-size: 28px;
@@ -150,7 +158,7 @@ a {
 }
 .grid {
   display: grid;
-  gap: 16px;
+  gap: 32px;
 }
 .grid.two {
   grid-template-columns: 1fr 1fr;
@@ -159,30 +167,38 @@ a {
   grid-template-columns: repeat(4, 1fr);
 }
 .card {
-  background: var(--elev);
+  background: var(--bg);
   border: 1px solid var(--stroke);
   border-radius: 14px;
   padding: 18px;
+  transition: transform 0.2s linear;
+  box-shadow: var(--box-shadow-style-default);
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 .card h3 {
   margin: 0 0 8px;
 }
 .panel {
   min-height: 180px;
-  background: linear-gradient(145deg, #0f172a, #0b1220);
-  border: 1px solid var(--stroke);
-  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
+}
+.panel img {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
 }
 .cta-band {
-  background: linear-gradient(
-    135deg,
-    rgba(16, 185, 129, 0.08),
-    var(--brand)
+  background: radial-gradient(
+    1200px 600px at 50% 50%,
+    var(--brand),
+    var(--banner-gradient-contrast)
   );
+  color: var(--muted);
 }
 .cta-band-inner {
   display: flex;
@@ -204,7 +220,7 @@ a {
   border-top: 1px solid var(--stroke);
   margin-top: 12px;
   padding-top: 12px;
-  color: var(--muted);
+  color: var(--text);
   text-align: center;
   font-size: 14px;
 }
