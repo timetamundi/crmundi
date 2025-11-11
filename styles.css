@@ -52,7 +52,7 @@ a {
   align-items: center;
 }
 .brand img {
-  height: 100px;     /* ajuste conforme necessário (ex.: 24–36px) */
+  height: 100px; /* ajuste conforme necessário (ex.: 24–36px) */
   width: auto;
   display: block;
 }
@@ -164,7 +164,17 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 .cards {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+/* garantir que cada card seja uma coluna flex que expande */
+.grid.cards .card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* empurra o botão para o fim do card */
+.grid.cards .card .btn {
+  margin-top: auto;
 }
 .card {
   background: var(--bg);
@@ -202,6 +212,7 @@ a {
 }
 .cta-band-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
@@ -223,6 +234,14 @@ a {
   color: var(--text);
   text-align: center;
   font-size: 14px;
+}
+.plans {
+  color: var(--text);
+}
+.plans .btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
 }
 @media (max-width: 900px) {
   .hero-grid {
