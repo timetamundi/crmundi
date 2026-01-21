@@ -224,6 +224,7 @@ a {
   gap: 16px;
 }
 .footer {
+  margin-top: auto;
   padding: 28px 0;
 }
 .footer-grid {
