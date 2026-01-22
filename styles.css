@@ -259,7 +259,7 @@ div.plans.grid.cards > article:nth-child(2) > a:nth-child(5),
 div.plans.grid.cards > article:nth-child(3) > a:nth-child(4) {
   margin-top: auto;
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .hero-grid {
     grid-template-columns: 1fr;
   }
@@ -279,7 +279,7 @@ div.plans.grid.cards > article:nth-child(3) > a:nth-child(4) {
     right: 16px;
     top: 64px;
     flex-direction: column;
-    background: var(--elev);
+    background: var(--header-bg);
     border: 1px solid var(--stroke);
     padding: 8px;
     border-radius: 10px;
