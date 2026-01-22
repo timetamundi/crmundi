@@ -39,7 +39,7 @@ form.addEventListener("submit", function (event) {
       }).then((_) => {
         form.reset();
         formButton.disabled = false;
-        formButton.textContent = "Enviar";
+        formButton.textContent = "Quero participar";
       });
     })
     .catch((_) => {
@@ -53,7 +53,7 @@ form.addEventListener("submit", function (event) {
       }).then((_) => {
         form.reset();
         formButton.disabled = false;
-        formButton.textContent = "Enviar";
+        formButton.textContent = "Quero participar";
       });
     });
 });
