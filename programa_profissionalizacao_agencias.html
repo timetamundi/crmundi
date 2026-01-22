@@ -43,9 +43,9 @@
       <div class="container hero-grid">
         <div class="hero-text">
           <h1>Programa de Profissionalização CRMundi</h1>
-          <p>Gestão, tecnologia e estratégia para agências de viagens que querem crescer com dados</p>
+          <p>Gestão, tecnologia e estratégia para agências de viagens que querem sair das planilhas</p>
           <div class="cta" style="margin-bottom: 20px;">
-            <a class="btn btn-primary" target="_blank" rel="noopener"
+            <a class="btn btn-primary pulse-element" target="_blank" rel="noopener"
               href="https://wa.me/5521982451106?text=Quero%20uma%20demo%20do%20CRMundi">Inscreva-se já</a>
           </div>
           <p>
@@ -62,29 +62,6 @@
         <div class="hero-media">
           <div class="mockup"><img src="./img/profissionalizacao.png"></div>
         </div>
-      </div>
-    </section>
-
-    <section id="modulos" class="section">
-      <div class="container">
-        <h2>Por que participar?</h2>
-        <h3>Uma gestão eficiente começa quando sua agência tem:</h3>
-        <div class="grid cards">
-          <article class="card">
-            <h3>Visibilidade completa do histórico do cliente</h3>
-          </article>
-          <article class="card">
-            <h3>Previsibilidade de fluxo de caixa com dados em tempo real</h3>
-          </article>
-          <article class="card">
-            <h3>Painéis unificados para decisões rápidas e estratégicas</h3>
-          </article>
-          <article class="card">
-            <h3>Menos dependência de planilhas, anotações e informações descentralizadas</h3>
-          </article>
-        </div>
-        <h3>O CRMundi ajuda sua agência a sair da operação reativa e avançar para uma gestão orientada por dados, focada
-          em crescimento sustentável.</h3>
       </div>
     </section>
 
@@ -119,7 +96,7 @@
               </ul>
             </div>
             <div class="cta">
-              <a class="btn btn-primary" target="_blank" rel="noopener"
+              <a class="btn btn-primary pulse-element" target="_blank" rel="noopener"
                 href="https://wa.me/5521982451106?text=Quero%20uma%20demo%20do%20CRMundi">Inscreva-se já</a>
             </div>
           </div>
@@ -153,39 +130,34 @@
     </section>
 
     <section id="contato" class="section cta-band">
-      <div class="container cta-band-inner">
+      <div class="container cta-band-inner subscription-form">
         <h2>Tudo o que sua agência precisa em um só lugar</h2>
-        <div class="plans grid cards">
-          <article class="card">
-            <h3>Recursos</h3>
-            <ul>
-              <li>Vendas: pipeline, funil por etapas, tarefas, metas e relatórios</li>
-              <li>Financeiro: receitas e despesas vinculadas às vendas, conciliação e relatórios</li>
-              <li>Pós-vendas: atendimentos, SLA, NPS e histórico completo do cliente</li>
-              <li>WhatsApp integrado: comunicação centralizada para vendas e suporte</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Benefício exclusivo para associados ABAV</h3>
-            <ul>
-              <li>👉 Associados ABAV ganham acesso gratuito ao CRMundi por 6 meses.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Não perca tempo</h3>
-            <ul>
-              <li>Mais de R$ 2.000.000,00 já foram economizados por agências que adotaram uma gestão integrada,
-                orientada por dados e processos claros.</li>
-            </ul>
-          </article>
-        </div>
-        <h2>Pronto para acelerar seu time com o CRMundi?</h2>
-        <div class="cta">
-          <a class="btn btn-primary" target="_blank" rel="noopener"
-            href="https://wa.me/5521982451106?text=Quero%20uma%20demo%20do%20CRMundi">Inscreva-se já</a>
-        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <br>
+            <input type="text" id="name" name="name" required oninvalid="this.setCustomValidity('Campo obrigatório')"
+              oninput="this.setCustomValidity('')" autocomplete="name" maxlength="200">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Forneça um email válido')"
+              oninput="this.setCustomValidity('')" autocomplete="email" maxlength="200">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone/WhatsApp</label>
+            <br>
+            <input type="tel" id="phone" name="phone" required oninvalid="this.setCustomValidity('Campo obrigatório')"
+              oninput="this.setCustomValidity('')" autocomplete="phone">
+          </div>
+          <div class="form-group">
+            <label for="company">Empresa <span class="optional">(Opcional)</span></label>
+            <br>
+            <input type="text" id="company" name="company" autocomplete="company" maxlength="200">
+          </div>
+          <button id="enviaForm" type="submit" class="btn btn-primary pulse-element">Enviar</button>
+        </form>
       </div>
     </section>
   </main>
@@ -215,6 +187,9 @@
     <div class="copy">© <span id="year"></span> CRMundi. Todos os direitos reservados.</div>
   </footer>
 
+  <script src="./jquery-4.0.0.min.js"></script>
+  <script src="./jquery.mask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./script.js?v=1.0.6"></script>
 </body>
 
