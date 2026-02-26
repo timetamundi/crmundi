@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CRMundi — Teste grátis por 3 meses, sem cartão de crédito</title>
+
+    <meta name="description"
+        content="Comece a usar o CRMundi agora. CRM completo com Vendas, Pós-vendas, Financeiro e WhatsApp integrado. Teste gratuito por 3 meses." />
+    <meta property="og:title" content="CRMundi — Comece grátis hoje" />
+    <meta property="og:description"
+        content="Organize seu funil de vendas, atenda no WhatsApp e gerencie o financeiro em um só lugar." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://crmundi.com/landingpage_email" />
+    <meta name="facebook-domain-verification" content="y7z0lrnvvf7buypi56ek5gq560jdaw" />
+
+    <link rel="stylesheet" href="./styles.css?v=1.0.8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="./img/site.webmanifest">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* ── Lucide icons ─────────────────────────────────────────── */
+        .lp-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        .benefit-icon .lp-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .guarantee-icon .lp-icon svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .guarantee-badge-icon .lp-icon svg {
+            width: 44px;
+            height: 44px;
+            color: #fff;
+        }
+
+        .privacy-note .lp-icon svg {
+            width: 14px;
+            height: 14px;
+            vertical-align: -2px;
+        }
+
+        .bullets .lp-icon svg {
+            width: 16px;
+            height: 16px;
+            color: #6ee7b7;
+            margin-right: 4px;
+            vertical-align: -3px;
+        }
+
+        .urgency-bar .lp-icon svg {
+            width: 16px;
+            height: 16px;
+            vertical-align: -3px;
+            color: #fcd34d;
+        }
+
+        /* ── Urgência / barra topo ────────────────────────────────── */
+        .urgency-bar {
+            background: linear-gradient(90deg, var(--brand-3), var(--brand));
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ── Hero override para esta LP ───────────────────────────── */
+        .hero-lp {
+            padding: 60px 0 56px;
+            background: radial-gradient(1200px 600px at 50% 50%, var(--brand), var(--banner-gradient-contrast));
+            color: var(--muted);
+            border-bottom: 1px solid var(--stroke);
+        }
+
+        .hero-lp-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-lp h1 {
+            font-size: 40px;
+            line-height: 1.2;
+            margin: 0 0 12px;
+        }
+
+        .hero-lp .sub {
+            font-size: 18px;
+            margin: 0 0 24px;
+            opacity: 0.88;
+        }
+
+        /* ── Caixa de captura de e-mail ───────────────────────────── */
+        .capture-box {
+            background: #ffffff12;
+            border: 1px solid #ffffff28;
+            border-radius: 16px;
+            padding: 32px 28px;
+            backdrop-filter: blur(6px);
+        }
+
+        .capture-box h2 {
+            font-size: 22px;
+            margin: 0 0 6px;
+            color: #fff;
+        }
+
+        .capture-box .sub-cap {
+            font-size: 14px;
+            color: #d1fae5;
+            margin: 0 0 20px;
+        }
+
+        .capture-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .capture-form input {
+            width: 100%;
+            height: 44px;
+            border-radius: 10px;
+            border: none;
+            padding: 0 16px;
+            font-size: 15px;
+            color: var(--text);
+            outline: none;
+        }
+
+        .capture-form input:focus {
+            box-shadow: 0 0 0 2px var(--brand-2);
+        }
+
+        .capture-form button {
+            height: 48px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--brand), var(--brand-2));
+            color: #fff;
+            transition: opacity 0.2s;
+        }
+
+        .capture-form button:hover {
+            opacity: 0.88;
+        }
+
+        .privacy-note {
+            font-size: 12px;
+            text-align: center;
+            color: #a7f3d0;
+            margin-top: 6px;
+        }
+
+        /* ── Logos / prova social ─────────────────────────────────── */
+        .social-proof {
+            padding: 32px 0;
+            border-bottom: 1px solid var(--stroke);
+            text-align: center;
+        }
+
+        .social-proof p {
+            font-size: 13px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 16px;
+        }
+
+        .proof-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .badge {
+            background: var(--bg);
+            border: 1px solid var(--stroke);
+            border-radius: 999px;
+            padding: 6px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            box-shadow: var(--box-shadow-style-default);
+        }
+
+        /* ── Benefícios ───────────────────────────────────────────── */
+        .benefit-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* ── Como funciona ────────────────────────────────────────── */
+        .steps {
+            counter-reset: step;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-num {
+            counter-increment: step;
+            min-width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand), var(--brand-2));
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-body h3 {
+            margin: 0 0 4px;
+            font-size: 17px;
+        }
+
+        .step-body p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        /* ── Depoimentos ──────────────────────────────────────────── */
+        .testimonials {
+            background: radial-gradient(1200px 600px at 50% 50%, var(--brand-3), var(--banner-gradient-contrast));
+            color: var(--muted);
+        }
+
+        .testimonial-card {
+            background: #ffffff12;
+            border: 1px solid #ffffff22;
+            border-radius: 14px;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .testimonial-card blockquote {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .testimonial-card cite {
+            font-style: normal;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--brand-2);
+        }
+
+        /* ── CTA final ────────────────────────────────────────────── */
+        .final-cta {
+            padding: 72px 0;
+            text-align: center;
+            background: radial-gradient(1200px 500px at 50% 50%, var(--brand), var(--banner-gradient-contrast));
+            color: var(--muted);
+        }
+
+        .final-cta h2 {
+            font-size: 34px;
+            margin: 0 0 12px;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin: 0 0 28px;
+            opacity: 0.85;
+        }
+
+        .final-cta .capture-box {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* ── Se\u00e7\u00e3o de Garantia ─────────────────────────────────────── */
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .guarantee-card {
+            background: var(--bg);
+            border: 1px solid var(--stroke);
+            border-radius: 14px;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: var(--box-shadow-style-default);
+            transition: transform 0.2s;
+        }
+
+        .guarantee-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .guarantee-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .guarantee-card h3 {
+            font-size: 15px;
+            margin: 0 0 8px;
+            color: var(--elev);
+        }
+
+        .guarantee-card p {
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .guarantee-badge {
+            display: flex;
+            justify-content: center;
+        }
+
+        .guarantee-badge-inner {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            background: linear-gradient(135deg, var(--brand), var(--brand-2));
+            color: #fff;
+            border-radius: 16px;
+            padding: 18px 32px;
+            box-shadow: 0 8px 24px #6bad5340;
+        }
+
+        .guarantee-badge-icon {
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+
+        .guarantee-badge-inner strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+
+        .guarantee-badge-inner span {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* ── Responsive ───────────────────────────────────────────── */
+        @media (max-width: 1000px) {
+            .hero-lp-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-lp h1 {
+                font-size: 32px;
+            }
+
+            .guarantee-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 560px) {
+            .guarantee-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de urgência -->
+    <div class="urgency-bar">
+        <span class="lp-icon"><i data-lucide="flame"></i></span> Oferta especial: 3 meses grátis + setup incluso para os
+        próximos 100 clientes. Restam poucas vagas!
+    </div>
+
+    <!-- Header mínimo (sem menu distrator) -->
+    <header class="header">
+        <div class="container nav">
+            <a class="brand" href="./" aria-label="CRMundi">
+                <img src="img/logo.png" alt="CRMundi" />
+            </a>
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+                href="https://wa.me/551152170968?text=Quero%20testar%20o%20CRMundi%20gr%C3%A1tis">Falar no WhatsApp</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ── HERO ─────────────────────────────────────────────── -->
+        <section class="hero-lp">
+            <div class="container hero-lp-inner">
+                <div class="hero-text">
+                    <h1>O CRM feito para organizar sua agência de viagens</h1>
+                    <p class="sub">Vendas, pós-vendas, financeiro e WhatsApp integrados em um único lugar. Comece grátis
+                        hoje e transforme sua operação em 3 meses.</p>
+                    <ul class="bullets">
+                        <li><span class="lp-icon"><i data-lucide="circle-check"></i></span> Sem cartão de crédito</li>
+                        <li><span class="lp-icon"><i data-lucide="circle-check"></i></span> Setup gratuito incluso</li>
+                        <li><span class="lp-icon"><i data-lucide="circle-check"></i></span> Suporte em português</li>
+                        <li><span class="lp-icon"><i data-lucide="circle-check"></i></span> Cancele quando quiser</li>
+                    </ul>
+                </div>
+
+                <!-- Formulário de captura no hero -->
+                <div class="capture-box">
+                    <h2>Comece seu teste grátis agora</h2>
+                    <p class="sub-cap">3 meses gratuitos, sem cartão de crédito.</p>
+                    <form class="capture-form" id="heroForm">
+                        <input type="text" id="hero-name" name="name" placeholder="Seu nome" required
+                            oninvalid="this.setCustomValidity('Campo obrigatório')" oninput="this.setCustomValidity('')"
+                            autocomplete="name" maxlength="200">
+                        <input type="email" id="hero-email" name="email" placeholder="Seu melhor e-mail" required
+                            oninvalid="this.setCustomValidity('Forneça um e-mail válido')"
+                            oninput="this.setCustomValidity('')" autocomplete="email" maxlength="200">
+                        <input type="tel" id="hero-phone" name="phone" placeholder="WhatsApp (com DDD)" required
+                            oninvalid="this.setCustomValidity('Campo obrigatório')" oninput="this.setCustomValidity('')"
+                            autocomplete="tel">
+                        <button type="submit" id="heroFormBtn" class="pulse-element">Teste grátis durante 3
+                            meses</button>
+                    </form>
+                    <p class="privacy-note"><span class="lp-icon"><i data-lucide="lock"></i></span> Seus dados estão
+                        seguros. Sem spam.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ── BENEFÍCIOS ────────────────────────────────────────── -->
+        <section id="beneficios" class="section">
+            <div class="container">
+                <h2>Por que o CRMundi é diferente?</h2>
+                <div class="grid cards">
+                    <article class="card">
+                        <span class="benefit-icon"><span class="lp-icon"><i data-lucide="plane"></i></span></span>
+                        <h3>Módulo de vendas completo</h3>
+                        <p>Venda passagens aéreas, transfer, hotel, pacotes e muito mais.</p>
+                    </article>
+                    <article class="card">
+                        <span class="benefit-icon"><span class="lp-icon"><i
+                                    data-lucide="message-circle"></i></span></span>
+                        <h3>WhatsApp integrado</h3>
+                        <p>Chega de dar um número para cada operador! Tenha visão central de toda sua operação através
+                            de um único número.</p>
+                    </article>
+                    <article class="card">
+                        <span class="benefit-icon"><span class="lp-icon"><i data-lucide="dollar-sign"></i></span></span>
+                        <h3>Financeiro conectado</h3>
+                        <p>Receitas e despesas vinculadas às vendas. Saiba exatamente o que está entrando e o que está
+                            saindo,
+                            sem planilha.</p>
+                    </article>
+                    <article class="card">
+                        <span class="benefit-icon"><span class="lp-icon"><i data-lucide="bar-chart-2"></i></span></span>
+                        <h3>Relatórios em tempo real</h3>
+                        <p>Dados de vendas, pós-vendas e financeiro num painel único. Tome decisões baseadas em números,
+                            não
+                            em achismo.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="benefit-icon"><span class="lp-icon"><i data-lucide="lock"></i></span></span>
+                        <h3>Segurança e controle</h3>
+                        <p>Permissões por usuário, histórico completo e dados armazenados com segurança. Sua operação
+                            protegida.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── COMO FUNCIONA ─────────────────────────────────────── -->
+        <section class="section integrations">
+            <div class="container">
+                <div class="grid two">
+                    <div>
+                        <h2>Comece em menos de 10 minutos</h2>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-num">1</div>
+                                <div class="step-body">
+                                    <h3>Crie sua conta grátis</h3>
+                                    <p>Preencha o formulário acima. Sem cartão de crédito, sem burocracia.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">2</div>
+                                <div class="step-body">
+                                    <h3>Receba o setup gratuito</h3>
+                                    <p>Nossa equipe configura o CRM com o perfil da sua operação — incluso no teste.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">3</div>
+                                <div class="step-body">
+                                    <h3>Convide seu time</h3>
+                                    <p>Adicione vendedores, atribua conversas e acompanhe tudo em tempo real.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">4</div>
+                                <div class="step-body">
+                                    <h3>Venda mais e decida com dados</h3>
+                                    <p>Vendas, financeiro e WhatsApp funcionando juntos logo no primeiro dia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta" style="margin-top: 28px;">
+                            <a class="btn btn-primary pulse-element" href="#captura-final">Quero começar agora</a>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <img src="./img/demo-note.png" alt="CRMundi em ação">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DEPOIMENTOS ───────────────────────────────────────── -->
+        <section class="section testimonials">
+            <div class="container">
+                <h2>Quem usa, recomenda</h2>
+                <div class="grid cards">
+                    <div class="testimonial-card">
+                        <blockquote>"Saímos das planilhas bagunçadas e em 2 semanas já tínhamos visibilidade total do
+                            funil.
+                            O WhatsApp integrado mudou como atendemos os clientes."</blockquote>
+                        <cite>— Renata M., Diretora Comercial · Agência de Viagens SP</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>"O setup foi feito pelo time do CRMundi e em menos de 1 hora já estávamos operando.
+                            Nunca
+                            foi tão fácil acompanhar as metas do time."</blockquote>
+                        <cite>— Carlos A., Sócio · Operadora Regional RJ</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>"Com o financeiro conectado às vendas, finalmente vi onde estávamos perdendo margem.
+                            Recuperamos mais de R$8k em receita no primeiro mês."</blockquote>
+                        <cite>— Fernanda T., Proprietária · Agência BH</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── OBJEÇÕES / GARANTIA ───────────────────────────── -->
+        <section class="section guarantee-section">
+            <div class="container">
+                <h2 style="text-align:center; margin-bottom: 8px;">Sem risco nenhum para você</h2>
+                <p style="text-align:center; margin: 0 0 36px; color: var(--text); opacity: 0.75;">Criamos todas as
+                    condições para você testar sem medo e sem compromisso.</p>
+
+                <div class="guarantee-grid">
+                    <div class="guarantee-card">
+                        <div class="guarantee-icon"><span class="lp-icon"><i data-lucide="calendar"></i></span></div>
+                        <h3>3 meses grátis</h3>
+                        <p>Acesso completo por 3 meses sem cobrança. Sem precisar informar cartão de crédito.</p>
+                    </div>
+                    <div class="guarantee-card">
+                        <div class="guarantee-icon"><span class="lp-icon"><i data-lucide="settings"></i></span></div>
+                        <h3>Setup gratuito</h3>
+                        <p>Nossa equipe configura o CRM no perfil da sua agência — sem custo adicional.</p>
+                    </div>
+                    <div class="guarantee-card">
+                        <div class="guarantee-icon"><span class="lp-icon"><i data-lucide="message-circle"></i></span>
+                        </div>
+                        <h3>Suporte em português</h3>
+                        <p>Atendimento via WhatsApp, e-mail e chat. Sem robôs, sem filas intermitáveis.</p>
+                    </div>
+                    <div class="guarantee-card">
+                        <div class="guarantee-icon"><span class="lp-icon"><i data-lucide="refresh-cw"></i></span></div>
+                        <h3>Cancele quando quiser</h3>
+                        <p>Nenhuma multa, nenhuma burocracia. Você no controle, sempre.</p>
+                    </div>
+                    <div class="guarantee-card">
+                        <div class="guarantee-icon"><span class="lp-icon"><i data-lucide="lock"></i></span></div>
+                        <h3>Seus dados são seus</h3>
+                        <p>Exportação completa disponível a qualquer momento. Sem rehém de plataforma.</p>
+                    </div>
+                </div>
+
+                <div class="guarantee-badge">
+                    <div class="guarantee-badge-inner">
+                        <span class="guarantee-badge-icon"><span class="lp-icon"><i
+                                    data-lucide="shield"></i></span></span>
+                        <div>
+                            <strong>Garantia total</strong>
+                            <span>3 meses. Sem cartão. Sem compromisso.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CTA FINAL ─────────────────────────────────────────── -->
+        <section id="captura-final" class="final-cta">
+            <div class="container">
+                <h2>Sua equipe merece um CRM de verdade</h2>
+                <p>Comece agora e transforme sua operação em 3 meses — ou cancele sem custo.</p>
+                <div class="capture-box">
+                    <h2>Garantir meu teste grátis</h2>
+                    <p class="sub-cap">Preencha abaixo e entraremos em contato em minutos.</p>
+                    <form class="capture-form" id="finalForm">
+                        <input type="text" id="final-name" name="name" placeholder="Seu nome" required
+                            oninvalid="this.setCustomValidity('Campo obrigatório')" oninput="this.setCustomValidity('')"
+                            autocomplete="name" maxlength="200">
+                        <input type="email" id="final-email" name="email" placeholder="Seu melhor e-mail" required
+                            oninvalid="this.setCustomValidity('Forneça um e-mail válido')"
+                            oninput="this.setCustomValidity('')" autocomplete="email" maxlength="200">
+                        <input type="tel" id="final-phone" name="phone" placeholder="WhatsApp (com DDD)" required
+                            oninvalid="this.setCustomValidity('Campo obrigatório')" oninput="this.setCustomValidity('')"
+                            autocomplete="tel">
+                        <input type="text" id="final-company" name="company"
+                            placeholder="Nome da sua empresa (opcional)" autocomplete="organization" maxlength="200">
+                        <button type="submit" id="finalFormBtn" class="pulse-element">Teste grátis durante 3
+                            meses</button>
+                    </form>
+                    <p class="privacy-note"><span class="lp-icon"><i data-lucide="lock"></i></span> Seus dados estão
+                        seguros. Sem spam.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="brand">CRMundi</div>
+                <p>CRM com Vendas, Pós-vendas, Financeiro e WhatsApp.</p>
+            </div>
+            <div>
+                <strong>Contato</strong>
+                <ul>
+                    <li><a href="mailto:contato@crmundi.com.br">contato@crmundi.com.br</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://wa.me/551152170968">WhatsApp: (11) 5217 0968</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <strong>Links</strong>
+                <ul>
+                    <li><a href="./#modulos">Módulos</a></li>
+                    <li><a href="./#integracoes">Integrações</a></li>
+                    <li><a href="./#beneficios">Benefícios</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy">© <span id="year"></span> CRMundi. Todos os direitos reservados.</div>
+    </footer>
+
+    <script src="./jquery-4.0.0.min.js"></script>
+    <script src="./jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Ano no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Máscara de telefone
+        $('#hero-phone, #final-phone').mask('(00) 00000-0000');
+
+        // Scroll suave para CTA
+        document.querySelectorAll('a[href="#captura-final"]').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('captura-final').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Endpoint Google Sheets (mesmo do programa de profissionalização)
+        var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzwn4fTQGSkaTVjF3-AznFEFmFcqHrar_uZ_muy0BoL5suCAAzK_KnMT1Qy3gZbXcCt3g/exec';
+
+        function handleForm(formId, btnId, btnLabel) {
+            var form = document.getElementById(formId);
+            var btn = document.getElementById(btnId);
+            if (!form || !btn) return;
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                btn.disabled = true;
+                btn.textContent = 'Enviando...';
+                var dataObject = Object.fromEntries(new FormData(form).entries());
+                fetch(SHEETS_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(dataObject)
+                })
+                    .then(function (r) { return r.json(); })
+                    .then(function () {
+                        Swal.fire({
+                            title: 'Formulário enviado com sucesso!',
+                            text: 'Em breve entraremos em contato para iniciar o seu teste gratuito.',
+                            icon: 'success',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'Ok'
+                        }).then(function () {
+                            form.reset();
+                            btn.disabled = false;
+                            btn.textContent = btnLabel;
+                        });
+                    })
+                    .catch(function () {
+                        Swal.fire({
+                            title: 'Não foi possível enviar!',
+                            text: 'Por favor, tente novamente mais tarde.',
+                            icon: 'error',
+                            confirmButtonColor: 'red',
+                            confirmButtonText: 'Ok'
+                        }).then(function () {
+                            form.reset();
+                            btn.disabled = false;
+                            btn.textContent = btnLabel;
+                        });
+                    });
+            });
+        }
+
+        handleForm('heroForm', 'heroFormBtn', 'Teste grátis durante 3 meses');
+        handleForm('finalForm', 'finalFormBtn', 'Teste grátis durante 3 meses');
+
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
