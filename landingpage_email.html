@@ -711,6 +711,9 @@
                 btn.disabled = true;
                 btn.textContent = 'Enviando...';
                 var dataObject = Object.fromEntries(new FormData(form).entries());
+                if (!dataObject.company) {
+                    dataObject.company = '';
+                }
                 fetch(SHEETS_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
